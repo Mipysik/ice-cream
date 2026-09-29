@@ -45,18 +45,61 @@ filterButtons.forEach((button) => {
   });
 });
 
-const revealItems = document.querySelectorAll('.reveal');
+const revealItems = document.querySelectorAll('.reveal:not(.product)');
+const parallaxImages = document.querySelectorAll('.pairing__image img, .coffee-section__photo img, .visit-section__photo img');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if ('IntersectionObserver' in window) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.12 });
+if (!prefersReducedMotion) {
+  import('https://esm.sh/animejs')
+    .then(({ animate, onScroll }) => {
+      revealItems.forEach((item, index) => {
+        const startX = index % 2 === 0 ? '-2rem' : '2rem';
 
-  revealItems.forEach((item) => revealObserver.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add('is-visible'));
+        animate(item, {
+          x: [startX, '0rem'],
+          y: ['1.5rem', '0rem'],
+          scale: [0.985, 1],
+          ease: 'linear',
+          autoplay: onScroll({
+            target: item,
+            enter: 'bottom 92%',
+            leave: 'top 8%',
+            sync: true,
+          }),
+        });
+      });
+
+      products.forEach((product, index) => {
+        const startRotation = index % 2 === 0 ? '-0.6deg' : '0.6deg';
+
+        animate(product, {
+          y: ['1.25rem', '0rem'],
+          scale: [0.985, 1],
+          rotate: [startRotation, '0deg'],
+          delay: (index % 3) * 25,
+          ease: 'linear',
+          autoplay: onScroll({
+            target: product,
+            enter: 'bottom 96%',
+            leave: 'top 48%',
+            sync: true,
+          }),
+        });
+      });
+
+      parallaxImages.forEach((image) => {
+        animate(image, {
+          y: ['-1rem', '1rem'],
+          scale: [1.025, 1],
+          ease: 'linear',
+          autoplay: onScroll({
+            target: image,
+            enter: 'bottom 90%',
+            leave: 'top 65%',
+            sync: true,
+          }),
+        });
+      });
+    })
+    .catch(() => {});
 }
