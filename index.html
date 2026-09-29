@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#173f32">
     <meta name="description" content="A neighbourhood pie, coffee and ice cream counter in West Vancouver. Find your little afternoon treat.">
-    <title>Scoop & Crust | Pie, coffee & a little joy</title>
+    <title>Savary Island | Pie, coffee & a little joy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Scoop and Crust home">
-        <span class="wordmark__seal" aria-hidden="true">S<span>&</span>C</span>
-        <span class="wordmark__text">Scoop <i>&</i> Crust<small>PIES · COFFEE · SCOOPS</small></span>
+      <a class="wordmark" href="#top" aria-label="Savary Island home">
+        <img class="wordmark__logo" src="https://savaryislandpiecompany.ca/cdn/shop/files/SavaryIslandPie-GoldLogo.png?v=1703278802&width=500" alt="Savary Island Pie Company">
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
         <span></span><span></span>
@@ -27,35 +26,36 @@
         <a href="#menu">The menu</a>
         <a href="#our-way">Our way</a>
         <a href="#visit">Find us</a>
+        <a href="https://savaryislandpiecompany.ca/pages/west-vancouver-bakery" target="_blank" rel="noopener noreferrer">Official bakery <span aria-hidden="true">↗</span></a>
         <a class="nav-cta" href="#menu">Explore the counter <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <img class="hero__image" src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=2200&q=88" alt="A colourful scoop of ice cream ready to enjoy" fetchpriority="high">
+        <img class="hero__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Ambleside_Park_sunset%2C_West_Vancouver%2C_BC_Canada.jpg/1280px-Ambleside_Park_sunset%2C_West_Vancouver%2C_BC_Canada.jpg" alt="Sunset over Ambleside Park in West Vancouver, British Columbia" fetchpriority="high">
         <div class="hero__shade"></div>
         <div class="hero__content">
           <p class="eyebrow eyebrow--light"><span></span> WEST VANCOUVER, BC</p>
           <h1 id="hero-title">A slice of pie.<br>A scoop of <em>joy.</em></h1>
-          <p class="hero__copy">A little neighbourhood stop for buttery pastry, beautiful coffee and the good kind of sweet.</p>
+          <p class="hero__copy">Our own original recipes, real natural ingredients, and the good kind of sweet—made with care right here in West Vancouver.</p>
           <a class="button button--light" href="#menu">Take a look at the menu <span aria-hidden="true">↓</span></a>
         </div>
         <div class="hero__note" aria-hidden="true"><span>BAKED</span><b>·</b><span>SCOOPED</span><b>·</b><span>SIPPED</span></div>
         <p class="hero__caption">A GOOD DAY STARTS WITH SOMETHING GOOD.</p>
       </section>
 
-      <div class="ticker" aria-label="Pie, coffee and ice cream">
-        <div class="ticker__track"><span>Fruit pie</span><i>✳</i><span>Lovely coffee</span><i>✳</i><span>One more scoop</span><i>✳</i><span>Fruit pie</span><i>✳</i><span>Lovely coffee</span><i>✳</i><span>One more scoop</span><i>✳</i></div>
+      <div class="ticker ticker--harvest" aria-label="Pumpkin pie, Canadian Thanksgiving and Halloween">
+        <div class="ticker__track"><span>Pumpkin pie season</span><i aria-hidden="true">🎃</i><span>Canadian Thanksgiving</span><i aria-hidden="true">✳</i><span>Halloween treats</span><i aria-hidden="true">🎃</i><span>Pumpkin pie season</span><i aria-hidden="true">✳</i><span>Canadian Thanksgiving</span><i aria-hidden="true">🎃</i><span>Halloween treats</span><i aria-hidden="true">✳</i></div>
       </div>
 
       <section class="menu-section section-pad" id="menu" aria-labelledby="menu-title">
         <div class="section-heading reveal">
           <div>
-            <p class="eyebrow"><span></span> SOMETHING FOR THE MOMENT</p>
+            <p class="eyebrow"><span></span> OUR OWN RECIPES · REAL INGREDIENTS</p>
             <h2 id="menu-title">Meet you at<br><em>the counter.</em></h2>
           </div>
-          <p class="section-heading__aside">A flaky little slice, a proper cup, a scoop on the side. Pick your kind of lovely.</p>
+          <p class="section-heading__aside">Our pies and treats are made with original recipes and real, natural ingredients, then served with lovely coffee and ice cream.</p>
         </div>
 
         <div class="menu-toolbar reveal">
@@ -82,23 +82,23 @@
 
           <article class="product reveal" data-category="pie">
             <div class="product__image-wrap">
-              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85" alt="Golden fruit pie with a crisp pastry crust" loading="lazy">
+              <img src="https://savaryislandpiecompany.ca/cdn/shop/products/Apple-Pie-Savary-Island-Pie-Company-26624592281818.jpg?v=1772453857&width=1000" alt="Apple pie from Savary Island Pie Company" loading="lazy">
               <span class="product__index">02</span>
               <span class="product__flag">A LITTLE WARM, PLEASE</span>
             </div>
             <div class="product__meta"><span>PIE + SCOOP</span><span>FROM $8.75</span></div>
-            <h3>Apple, meet vanilla</h3>
-            <p>Spiced apple in a golden crust, with a cool scoop alongside.</p>
+            <h3>Apple Pie</h3>
+            <p>A classic Savary fruit pie, lovely on its own or with a scoop.</p>
           </article>
 
           <article class="product reveal" data-category="scoop">
             <div class="product__image-wrap">
-              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=85" alt="A bright, creamy scoop of ice cream" loading="lazy">
+              <img src="https://savaryislandpiecompany.ca/cdn/shop/files/Sorbets.jpg?v=1750401774&width=1200" alt="Fruit sorbets from Savary Island Pie Company" loading="lazy">
               <span class="product__index">03</span>
             </div>
             <div class="product__meta"><span>THE SCOOP</span><span>FROM $4.25</span></div>
-            <h3>Strawberry daydream</h3>
-            <p>Bright berries, soft cream and just enough sunshine.</p>
+            <h3>Fruit Sorbets</h3>
+            <p>Bright fruit, cool scoops and a little taste of summer.</p>
           </article>
 
           <article class="product reveal" data-category="coffee">
@@ -114,22 +114,24 @@
 
           <article class="product reveal" data-category="pie">
             <div class="product__image-wrap">
-              <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=85" alt="A homemade-style fruit dessert with a golden finish" loading="lazy">
+              <img src="https://savaryislandpiecompany.ca/cdn/shop/products/Raspberry-Rhubarb_6f5a2948-5ad4-49b4-a40e-0bcd98c610a0.jpg?v=1637698362&width=1000" alt="Raspberry rhubarb pie from Savary Island Pie Company" loading="lazy">
               <span class="product__index">05</span>
+              <span class="product__flag product__flag--spring">SPRING BERRIES</span>
             </div>
             <div class="product__meta"><span>PIE + SCOOP</span><span>FROM $8.75</span></div>
-            <h3>Raspberry & peach</h3>
-            <p>Sweet-tart fruit, crumbly pastry and a scoop of something creamy.</p>
+            <h3>Raspberry Rhubarb Pie</h3>
+            <p>Tart rhubarb and ripe raspberry in a classic fruit pie.</p>
           </article>
 
-          <article class="product reveal" data-category="scoop">
+          <article class="product reveal" data-category="pie">
             <div class="product__image-wrap">
-              <img src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=900&q=85" alt="A generous scoop of ice cream in a cone" loading="lazy">
+              <img src="https://savaryislandpiecompany.ca/cdn/shop/products/Pumpkin-Pie-Savary-Island-Pie-Company.jpg?v=1755632659&width=1200" alt="Pumpkin pie from Savary Island Pie Company" loading="lazy">
               <span class="product__index">06</span>
+              <span class="product__flag product__flag--autumn">FALL HARVEST</span>
             </div>
-            <div class="product__meta"><span>THE SCOOP</span><span>FROM $4.25</span></div>
-            <h3>Vanilla bean</h3>
-            <p>Classic, creamy and ready to make friends with a pie slice.</p>
+            <div class="product__meta"><span>PIE + SCOOP</span><span>FROM $8.75</span></div>
+            <h3>Pumpkin Pie</h3>
+            <p>A seasonal favourite for Canadian Thanksgiving and Halloween gatherings.</p>
           </article>
         </div>
         <p class="menu-note">Menu names, prices and availability are sample content and can be updated to match your real offerings.</p>
@@ -137,13 +139,13 @@
 
       <section class="pairing" id="our-way" aria-labelledby="pairing-title">
         <div class="pairing__image">
-          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1400&q=88" alt="A plated dessert finished with fresh fruit and cream" loading="lazy">
+          <img src="https://i.imgur.com/dv07Gz8h.jpg" alt="A slice of pie served with ice cream and chocolate sauce" loading="lazy">
           <span class="pairing__seal">THE<br>PERFECT<br>PAIR</span>
         </div>
         <div class="pairing__content reveal">
-          <p class="eyebrow eyebrow--light"><span></span> THE BEST BITS, TOGETHER</p>
+          <p class="eyebrow eyebrow--light"><span></span> OUR WAY · MADE WITH REAL INGREDIENTS</p>
           <h2 id="pairing-title">Warm pie.<br>Cold scoop.<br><em>Good call.</em></h2>
-          <p>Choose a fruit-filled slice, add a scoop of ice cream and take your time with it. Some things just belong together.</p>
+          <p>We make our own pies and treats from original recipes and real, natural ingredients. Add a scoop of ice cream and take your time with it—some things just belong together.</p>
           <a class="text-link text-link--light" href="#menu">Find your pairing <span aria-hidden="true">↗</span></a>
         </div>
         <div class="pairing__scribble" aria-hidden="true">made for<br>each other</div>
@@ -164,24 +166,43 @@
       </section>
 
       <section class="visit-section" id="visit" aria-labelledby="visit-title">
+        <figure class="visit-section__photo">
+          <img src="https://savaryislandpiecompany.ca/cdn/shop/files/SIPCO-WestVan.jpg?v=1740669284&width=1200" alt="Inside Savary Island Pie Company's West Vancouver bakery" loading="lazy">
+          <figcaption class="visit-section__photo-credit">Photo from <a href="https://savaryislandpiecompany.ca/pages/west-vancouver-bakery" target="_blank" rel="noopener noreferrer">Savary Island Pie Company</a></figcaption>
+        </figure>
         <div class="visit-section__inner reveal">
-          <p class="eyebrow eyebrow--light"><span></span> A SWEET LITTLE DETOUR</p>
-          <h2 id="visit-title">Save us<br><em>a sunny seat.</em></h2>
-          <p>Find your next pie-and-coffee moment in West Vancouver.</p>
-          <a class="button button--light" href="#menu">See what's on the counter <span aria-hidden="true">↗</span></a>
+          <p class="eyebrow"><span></span> VISIT OUR WEST VANCOUVER BAKERY</p>
+          <h2 id="visit-title">Find us<br><em>on Marine Drive.</em></h2>
+          <dl class="visit-details">
+            <div class="visit-details__row">
+              <dt>Address</dt>
+              <dd>1533 Marine Dr, West Vancouver, BC V7V 1H9</dd>
+            </div>
+            <div class="visit-details__row">
+              <dt>Hours</dt>
+              <dd>Open · closes at 5:30 PM</dd>
+            </div>
+            <div class="visit-details__row">
+              <dt>Phone</dt>
+              <dd><a href="tel:+16049264021">(604) 926-4021</a></dd>
+            </div>
+          </dl>
+          <div class="visit-links">
+            <a class="visit-links__directions" href="https://www.google.com/maps/search/?api=1&query=1533+Marine+Dr+West+Vancouver+BC+V7V+1H9" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+            <span class="visit-links__secondary"><a href="https://savaryislandpiecompany.ca/pages/west-vancouver-bakery" target="_blank" rel="noopener noreferrer">Menu</a><span aria-hidden="true">·</span><a href="https://savaryislandpiecompany.ca/" target="_blank" rel="noopener noreferrer">Website</a></span>
+          </div>
         </div>
-        <div class="visit-section__side" aria-hidden="true"><span>WEST</span><span>VANCOUVER</span><span>BC · CANADA</span></div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a class="wordmark wordmark--footer" href="#top" aria-label="Scoop and Crust, back to top">
-        <span class="wordmark__seal" aria-hidden="true">S<span>&</span>C</span>
-        <span class="wordmark__text">Scoop <i>&</i> Crust<small>PIES · COFFEE · SCOOPS</small></span>
+      <a class="wordmark wordmark--footer" href="#top" aria-label="Savary Island, back to top">
+        <img class="wordmark__logo" src="https://savaryislandpiecompany.ca/cdn/shop/files/SavaryIslandPie-GoldLogo.png?v=1703278802&width=500" alt="Savary Island Pie Company">
       </a>
       <p>Made for the sweet pauses.</p>
       <a class="footer-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
       <small class="copyright">A concept site. Replace sample menu details before publishing.</small>
+      <small class="photo-credit">Savary Island pie and sorbet photos from the <a href="https://savaryislandpiecompany.ca/" target="_blank" rel="noopener noreferrer">official company website</a>. Billy Miner Pie photo by Gary, CC BY-SA 2.0. Ambleside Park photo by Gregozphotos, CC BY-SA 4.0.</small>
     </footer>
   </body>
 </html>
