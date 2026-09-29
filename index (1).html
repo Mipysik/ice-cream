@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173f32">
+    <meta name="description" content="A neighbourhood pie, coffee and ice cream counter in West Vancouver. Find your little afternoon treat.">
+    <title>Scoop & Crust | Pie, coffee & a little joy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Scoop and Crust home">
+        <span class="wordmark__seal" aria-hidden="true">S<span>&</span>C</span>
+        <span class="wordmark__text">Scoop <i>&</i> Crust<small>PIES · COFFEE · SCOOPS</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#menu">The menu</a>
+        <a href="#our-way">Our way</a>
+        <a href="#visit">Find us</a>
+        <a class="nav-cta" href="#menu">Explore the counter <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <img class="hero__image" src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=2200&q=88" alt="A colourful scoop of ice cream ready to enjoy" fetchpriority="high">
+        <div class="hero__shade"></div>
+        <div class="hero__content">
+          <p class="eyebrow eyebrow--light"><span></span> WEST VANCOUVER, BC</p>
+          <h1 id="hero-title">A slice of pie.<br>A scoop of <em>joy.</em></h1>
+          <p class="hero__copy">A little neighbourhood stop for buttery pastry, beautiful coffee and the good kind of sweet.</p>
+          <a class="button button--light" href="#menu">Take a look at the menu <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero__note" aria-hidden="true"><span>BAKED</span><b>·</b><span>SCOOPED</span><b>·</b><span>SIPPED</span></div>
+        <p class="hero__caption">A GOOD DAY STARTS WITH SOMETHING GOOD.</p>
+      </section>
+
+      <div class="ticker" aria-label="Pie, coffee and ice cream">
+        <div class="ticker__track"><span>Fruit pie</span><i>✳</i><span>Lovely coffee</span><i>✳</i><span>One more scoop</span><i>✳</i><span>Fruit pie</span><i>✳</i><span>Lovely coffee</span><i>✳</i><span>One more scoop</span><i>✳</i></div>
+      </div>
+
+      <section class="menu-section section-pad" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> SOMETHING FOR THE MOMENT</p>
+            <h2 id="menu-title">Meet you at<br><em>the counter.</em></h2>
+          </div>
+          <p class="section-heading__aside">A flaky little slice, a proper cup, a scoop on the side. Pick your kind of lovely.</p>
+        </div>
+
+        <div class="menu-toolbar reveal">
+          <p class="menu-toolbar__label">THE DAILY LINE-UP</p>
+          <div class="filter-list" role="group" aria-label="Filter menu items">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="coffee" aria-pressed="false">Coffee</button>
+            <button class="filter-button" type="button" data-filter="pie" aria-pressed="false">Pie</button>
+            <button class="filter-button" type="button" data-filter="scoop" aria-pressed="false">Scoops</button>
+          </div>
+        </div>
+        <p class="sr-only" id="filter-status" aria-live="polite"></p>
+
+        <div class="product-grid">
+          <article class="product reveal" data-category="coffee">
+            <div class="product__image-wrap">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Freshly poured coffee served in a ceramic cup" loading="lazy">
+              <span class="product__index">01</span>
+            </div>
+            <div class="product__meta"><span>COFFEE</span><span>FROM $4.50</span></div>
+            <h3>Cloud-top latte</h3>
+            <p>Velvety steamed milk, a double shot and a little leaf drawn on top.</p>
+          </article>
+
+          <article class="product reveal" data-category="pie">
+            <div class="product__image-wrap">
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85" alt="Golden fruit pie with a crisp pastry crust" loading="lazy">
+              <span class="product__index">02</span>
+              <span class="product__flag">A LITTLE WARM, PLEASE</span>
+            </div>
+            <div class="product__meta"><span>PIE + SCOOP</span><span>FROM $8.75</span></div>
+            <h3>Apple, meet vanilla</h3>
+            <p>Spiced apple in a golden crust, with a cool scoop alongside.</p>
+          </article>
+
+          <article class="product reveal" data-category="scoop">
+            <div class="product__image-wrap">
+              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=85" alt="A bright, creamy scoop of ice cream" loading="lazy">
+              <span class="product__index">03</span>
+            </div>
+            <div class="product__meta"><span>THE SCOOP</span><span>FROM $4.25</span></div>
+            <h3>Strawberry daydream</h3>
+            <p>Bright berries, soft cream and just enough sunshine.</p>
+          </article>
+
+          <article class="product reveal" data-category="coffee">
+            <div class="product__image-wrap">
+              <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=85" alt="A barista-style coffee with delicate latte art" loading="lazy">
+              <span class="product__index">04</span>
+              <span class="product__flag product__flag--berry">DRAWN BY HAND</span>
+            </div>
+            <div class="product__meta"><span>COFFEE</span><span>FROM $5.25</span></div>
+            <h3>Rosetta cappuccino</h3>
+            <p>Rich espresso, silky foam and a little flourish in every cup.</p>
+          </article>
+
+          <article class="product reveal" data-category="pie">
+            <div class="product__image-wrap">
+              <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=85" alt="A homemade-style fruit dessert with a golden finish" loading="lazy">
+              <span class="product__index">05</span>
+            </div>
+            <div class="product__meta"><span>PIE + SCOOP</span><span>FROM $8.75</span></div>
+            <h3>Raspberry & peach</h3>
+            <p>Sweet-tart fruit, crumbly pastry and a scoop of something creamy.</p>
+          </article>
+
+          <article class="product reveal" data-category="scoop">
+            <div class="product__image-wrap">
+              <img src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=900&q=85" alt="A generous scoop of ice cream in a cone" loading="lazy">
+              <span class="product__index">06</span>
+            </div>
+            <div class="product__meta"><span>THE SCOOP</span><span>FROM $4.25</span></div>
+            <h3>Vanilla bean</h3>
+            <p>Classic, creamy and ready to make friends with a pie slice.</p>
+          </article>
+        </div>
+        <p class="menu-note">Menu names, prices and availability are sample content and can be updated to match your real offerings.</p>
+      </section>
+
+      <section class="pairing" id="our-way" aria-labelledby="pairing-title">
+        <div class="pairing__image">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1400&q=88" alt="A plated dessert finished with fresh fruit and cream" loading="lazy">
+          <span class="pairing__seal">THE<br>PERFECT<br>PAIR</span>
+        </div>
+        <div class="pairing__content reveal">
+          <p class="eyebrow eyebrow--light"><span></span> THE BEST BITS, TOGETHER</p>
+          <h2 id="pairing-title">Warm pie.<br>Cold scoop.<br><em>Good call.</em></h2>
+          <p>Choose a fruit-filled slice, add a scoop of ice cream and take your time with it. Some things just belong together.</p>
+          <a class="text-link text-link--light" href="#menu">Find your pairing <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="pairing__scribble" aria-hidden="true">made for<br>each other</div>
+      </section>
+
+      <section class="coffee-section section-pad" aria-labelledby="coffee-title">
+        <div class="coffee-section__copy reveal">
+          <p class="eyebrow"><span></span> PAUSE, SIP, REPEAT</p>
+          <h2 id="coffee-title">Coffee with<br>a <em>little flourish.</em></h2>
+          <p>From a first-thing flat white to an afternoon latte, every cup deserves a bit of care. And a bit of art.</p>
+          <a class="text-link" href="#menu">See the coffee menu <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="coffee-section__photo reveal">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1300&q=88" alt="A warm cup of coffee ready for a quiet break" loading="lazy">
+          <figcaption>YOUR USUAL, OR SOMETHING NEW?</figcaption>
+        </figure>
+        <span class="coffee-section__doodle" aria-hidden="true">a little<br>lift</span>
+      </section>
+
+      <section class="visit-section" id="visit" aria-labelledby="visit-title">
+        <div class="visit-section__inner reveal">
+          <p class="eyebrow eyebrow--light"><span></span> A SWEET LITTLE DETOUR</p>
+          <h2 id="visit-title">Save us<br><em>a sunny seat.</em></h2>
+          <p>Find your next pie-and-coffee moment in West Vancouver.</p>
+          <a class="button button--light" href="#menu">See what's on the counter <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="visit-section__side" aria-hidden="true"><span>WEST</span><span>VANCOUVER</span><span>BC · CANADA</span></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark wordmark--footer" href="#top" aria-label="Scoop and Crust, back to top">
+        <span class="wordmark__seal" aria-hidden="true">S<span>&</span>C</span>
+        <span class="wordmark__text">Scoop <i>&</i> Crust<small>PIES · COFFEE · SCOOPS</small></span>
+      </a>
+      <p>Made for the sweet pauses.</p>
+      <a class="footer-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      <small class="copyright">A concept site. Replace sample menu details before publishing.</small>
+    </footer>
+  </body>
+</html>
