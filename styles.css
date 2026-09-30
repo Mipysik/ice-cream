@@ -59,7 +59,8 @@ button { color: inherit; font: inherit; }
 .hero__caption { position: absolute; bottom: 37px; left: max(5vw, calc((100vw - var(--content)) / 2)); margin: 0; color: rgba(255, 255, 255, 0.7); font-size: 9px; letter-spacing: 1.5px; }
 .ticker { overflow: hidden; color: var(--pine); background: var(--butter); }
 .ticker--harvest { color: #fff6e9; background: var(--night); }
-.ticker__track { display: flex; width: max-content; align-items: center; gap: 26px; padding: 12px 0; animation: ticker-scroll 36s linear infinite; }
+.ticker__track { display: flex; width: max-content; animation: ticker-scroll 36s linear infinite; }
+.ticker__group { display: flex; min-width: 100vw; flex: 0 0 auto; align-items: center; justify-content: space-around; gap: 26px; padding: 12px 5vw; }
 .ticker__track span { font-family: var(--serif); font-size: 17px; font-style: italic; }
 .ticker__track i { color: var(--berry); font-size: 13px; font-style: normal; }
 .ticker--harvest .ticker__track i { color: var(--pumpkin); font-size: 15px; }
@@ -294,7 +295,7 @@ button { color: inherit; font: inherit; }
   .hero__copy { max-width: 310px; font-size: 14px; }
   .hero__note { right: 22px; bottom: 23px; gap: 8px; font-size: 8px; }
   .hero__caption { bottom: 25px; left: 22px; max-width: 130px; font-size: 7px; line-height: 1.5; }
-  .ticker__track { gap: 18px; padding: 10px 0; }
+  .ticker__group { gap: 18px; padding: 10px 5vw; }
   .ticker__track span { font-size: 15px; }
   .section-pad { padding: 65px 22px; }
   .section-heading { display: block; }
