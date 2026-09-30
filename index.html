@@ -10,6 +10,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .pairing:has(.way-details[open]) .pairing__content {
+        width: 100%;
+        max-width: none;
+        padding-right: clamp(24px, 4vw, 56px);
+      }
+      .way-details[open] .way-details__panel {
+        width: calc(100% + clamp(10px, 2.2vw, 28px));
+        margin-left: clamp(10px, 2.2vw, 28px);
+        animation: details-enter 520ms cubic-bezier(.2, .7, .2, 1) both;
+      }
+      @keyframes details-enter {
+        from { opacity: 0; transform: translateX(-24px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @media (max-width: 560px) {
+        .pairing:has(.way-details[open]) .pairing__content {
+          padding-left: clamp(36px, 9vw, 44px);
+          padding-right: clamp(36px, 9vw, 44px);
+        }
+        .way-details[open] .way-details__panel {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    </style>
     <script type="module" src="script.js"></script>
   </head>
   <body>
@@ -26,8 +52,8 @@
         <a href="#menu">The menu</a>
         <a href="#our-way">Our way</a>
         <a href="#visit">Find us</a>
-        <a href="https://savaryislandpiecompany.ca/pages/west-vancouver-bakery" target="_blank" rel="noopener noreferrer">Official bakery <span aria-hidden="true">↗</span></a>
-        <a class="nav-cta" href="#menu">Explore the counter <span aria-hidden="true">↗</span></a>
+        <a href="https://savaryislandpiecompany.ca/pages/west-vancouver-bakery" target="_blank" rel="noopener noreferrer">Official bakery <span aria-hidden="true">↗&#xfe0e;</span></a>
+        <a class="nav-cta" href="#menu">Explore the counter <span aria-hidden="true">↗&#xfe0e;</span></a>
       </nav>
     </header>
 
@@ -39,14 +65,17 @@
           <p class="eyebrow eyebrow--light"><span></span> WEST VANCOUVER, BC</p>
           <h1 id="hero-title">A slice of pie.<br>A scoop of <em>joy.</em></h1>
           <p class="hero__copy">Our own original recipes, real natural ingredients, and the good kind of sweet—made with care right here in West Vancouver.</p>
-          <a class="button button--light" href="#menu">Take a look at the menu <span aria-hidden="true">↓</span></a>
+          <a class="button button--light" href="#menu">Take a look at the menu <span aria-hidden="true">↓&#xfe0e;</span></a>
         </div>
         <div class="hero__note" aria-hidden="true"><span>BAKED</span><b>·</b><span>SCOOPED</span><b>·</b><span>SIPPED</span></div>
         <p class="hero__caption">A GOOD DAY STARTS WITH SOMETHING GOOD.</p>
       </section>
 
       <div class="ticker ticker--harvest" aria-label="Pumpkin pie and Halloween treats">
-        <div class="ticker__track"><span>Pumpkin pie season</span><i aria-hidden="true">🎃</i><span>Halloween treats</span><i aria-hidden="true">✦</i><span>Made for October</span><i aria-hidden="true">🎃</i><span>Pumpkin pie season</span><i aria-hidden="true">✦</i><span>Halloween treats</span><i aria-hidden="true">🎃</i><span>Made for October</span><i aria-hidden="true">✦</i></div>
+        <div class="ticker__track">
+          <div class="ticker__group"><span>Pumpkin pie season</span><i aria-hidden="true">🎃</i><span>Halloween treats</span><i aria-hidden="true">✦</i><span>Made for October</span><i aria-hidden="true">🎃</i></div>
+          <div class="ticker__group" aria-hidden="true"><span>Pumpkin pie season</span><i>🎃</i><span>Halloween treats</span><i>✦</i><span>Made for October</span><i>🎃</i></div>
+        </div>
       </div>
 
       <section class="menu-section section-pad" id="menu" aria-labelledby="menu-title">
@@ -216,7 +245,7 @@
           <p class="eyebrow eyebrow--light"><span></span> OUR WAY · MADE WITH REAL INGREDIENTS</p>
           <h2 id="pairing-title">Warm pie.<br>Cold scoop.<br><em>Good call.</em></h2>
           <p>We make our own pies and treats from original recipes and real, natural ingredients. Add a scoop of ice cream and take your time with it—some things just belong together.</p>
-          <a class="text-link text-link--light" href="#menu">Find your pairing <span aria-hidden="true">↗</span></a>
+          <a class="text-link text-link--light" href="#menu">Find your pairing <span aria-hidden="true">↗&#xfe0e;</span></a>
           <details class="way-details">
             <summary>See how we make it <span aria-hidden="true">+</span></summary>
             <div class="way-details__panel">
@@ -256,8 +285,8 @@
             <span>APPLE HARVEST</span>
             <span>HALLOWEEN · OCTOBER 31</span>
           </div>
-          <a class="text-link" href="#menu">Find the seasonal slice <span aria-hidden="true">↗</span></a>
-          <button class="text-link season-guide__trigger" id="season-guide-trigger" type="button">Explore October traditions <span aria-hidden="true">↗</span></button>
+          <a class="text-link" href="#menu">Find the seasonal slice <span aria-hidden="true">↗&#xfe0e;</span></a>
+          <button class="text-link season-guide__trigger" id="season-guide-trigger" type="button">Explore October traditions <span aria-hidden="true">↗&#xfe0e;</span></button>
         </div>
         <figure class="coffee-section__photo reveal">
           <img src="https://savaryislandpiecompany.ca/cdn/shop/products/Pumpkin-Pie-Savary-Island-Pie-Company.jpg?v=1755632659&width=1600" alt="Pumpkin pie ready for a Halloween gathering" loading="lazy">
@@ -273,17 +302,17 @@
             <a class="jam-card" href="https://savaryislandpiecompany.ca/products/raspberry-rhubarb-jam" target="_blank" rel="noopener noreferrer">
               <img src="https://savaryislandpiecompany.ca/cdn/shop/products/Raspberry-Rhubarb-Jam-Savary-Island-Pie-Company-28699231256794.jpg?v=1772453841&width=1200" alt="Raspberry rhubarb jam from Savary Island Pie Company" loading="lazy">
               <span class="jam-card__meta"><strong>Raspberry Rhubarb</strong><b>$9.95</b></span>
-              <span class="jam-card__link">View product <span aria-hidden="true">↗</span></span>
+              <span class="jam-card__link">View product <span aria-hidden="true">↗&#xfe0e;</span></span>
             </a>
             <a class="jam-card" href="https://savaryislandpiecompany.ca/products/blueberry-raspberry-jam" target="_blank" rel="noopener noreferrer">
               <img src="https://savaryislandpiecompany.ca/cdn/shop/products/Blueberry-Raspberry-Jam-Savary-Island-Pie-Company-26925021790426.jpg?v=1772453851&width=1200" alt="Blueberry raspberry jam from Savary Island Pie Company" loading="lazy">
               <span class="jam-card__meta"><strong>Blueberry Raspberry</strong><b>$9.95</b></span>
-              <span class="jam-card__link">View product <span aria-hidden="true">↗</span></span>
+              <span class="jam-card__link">View product <span aria-hidden="true">↗&#xfe0e;</span></span>
             </a>
             <a class="jam-card" href="https://savaryislandpiecompany.ca/products/strawberry-rhubarb-jam" target="_blank" rel="noopener noreferrer">
               <img src="https://savaryislandpiecompany.ca/cdn/shop/products/Strawberry-Rhubarb-Jam-Savary-Island-Pie-Company-28699238269146.jpg?v=1772453836&width=1200" alt="Strawberry rhubarb jam from Savary Island Pie Company" loading="lazy">
               <span class="jam-card__meta"><strong>Strawberry Rhubarb</strong><b>$9.95</b></span>
-              <span class="jam-card__link">View product <span aria-hidden="true">↗</span></span>
+              <span class="jam-card__link">View product <span aria-hidden="true">↗&#xfe0e;</span></span>
             </a>
           </div>
         </div>
@@ -313,7 +342,7 @@
             </div>
           </dl>
           <div class="visit-links">
-            <a class="visit-links__directions" href="https://www.google.com/maps/search/?api=1&query=1533+Marine+Dr+West+Vancouver+BC+V7V+1H9" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+            <a class="visit-links__directions" href="https://www.google.com/maps/search/?api=1&query=1533+Marine+Dr+West+Vancouver+BC+V7V+1H9" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗&#xfe0e;</span></a>
             <span class="visit-links__secondary"><a href="https://savaryislandpiecompany.ca/pages/west-vancouver-bakery" target="_blank" rel="noopener noreferrer">Menu</a><span aria-hidden="true">·</span><a href="https://savaryislandpiecompany.ca/" target="_blank" rel="noopener noreferrer">Website</a></span>
           </div>
         </div>
@@ -333,7 +362,7 @@
           <p class="recipe-modal__intro"></p>
           <h3>Recipe notes</h3>
           <p class="recipe-modal__recipe"></p>
-          <a class="recipe-modal__source" href="https://savaryislandpiecompany.ca/products/pumpkin-pie" target="_blank" rel="noopener noreferrer">View original product <span aria-hidden="true">↗</span></a>
+          <a class="recipe-modal__source" href="https://savaryislandpiecompany.ca/products/pumpkin-pie" target="_blank" rel="noopener noreferrer">View original product <span aria-hidden="true">↗&#xfe0e;</span></a>
         </div>
       </article>
     </div>
@@ -369,7 +398,7 @@
         <img class="wordmark__logo" src="https://savaryislandpiecompany.ca/cdn/shop/files/SavaryIslandPie-GoldLogo.png?v=1703278802&width=500" alt="Savary Island Pie Company">
       </a>
       <p>Made for the sweet pauses.</p>
-      <a class="footer-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      <a class="footer-top" href="#top">Back to top <span aria-hidden="true">↑&#xfe0e;</span></a>
       <small class="copyright">A concept site. Replace sample menu details before publishing.</small>
       <small class="photo-credit">Savary Island pie and sorbet photos from the <a href="https://savaryislandpiecompany.ca/" target="_blank" rel="noopener noreferrer">official company website</a>. Billy Miner Pie photo by Gary, CC BY-SA 2.0. Ambleside Park photo by Gregozphotos, CC BY-SA 4.0.</small>
     </footer>
