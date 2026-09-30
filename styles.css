@@ -81,11 +81,12 @@ button { color: inherit; font: inherit; }
 .menu-drawer { margin: 0 0 62px; }
 .menu-drawer__button { display: flex; min-height: 50px; align-items: center; justify-content: space-between; padding: 0 17px; border: 1px solid var(--night); color: var(--night); background: transparent; cursor: pointer; font-size: 11px; font-weight: 700; letter-spacing: 1.4px; list-style: none; text-transform: uppercase; transition: color 160ms ease, background 160ms ease; }
 .menu-drawer__button::-webkit-details-marker { display: none; }
-.menu-drawer__button span { color: var(--pumpkin-dark); font-family: var(--serif); font-size: 24px; font-weight: 400; line-height: 1; }
+.menu-drawer__button span { color: var(--pumpkin-dark); font-family: var(--serif); font-size: 24px; font-weight: 400; line-height: 1; transition: transform 180ms ease; }
 .menu-drawer__button:hover, .menu-drawer[open] .menu-drawer__button { color: white; background: var(--night); }
 .menu-drawer[open] .menu-drawer__button span { transform: rotate(45deg); }
 .menu-drawer .menu-board { margin-bottom: 0; }
 .menu-board { position: relative; margin: 0 0 62px; padding: clamp(30px, 5vw, 58px) clamp(22px, 5vw, 70px); overflow: hidden; color: #fff8ed; background: var(--night); }
+.menu-drawer[open] .menu-board { animation: drawer-enter 460ms cubic-bezier(.2, .7, .2, 1) both; }
 .menu-board::before { position: absolute; top: -70px; right: -38px; width: 180px; height: 180px; border: 1px solid rgba(216, 120, 50, 0.45); border-radius: 50%; content: ""; }
 .menu-board::after { position: absolute; top: 18px; right: 42px; color: var(--pumpkin); content: "✦"; font-size: 24px; }
 .menu-board__heading { display: flex; align-items: end; justify-content: space-between; gap: 28px; padding-bottom: 28px; border-bottom: 1px solid rgba(255, 248, 237, 0.2); }
@@ -146,6 +147,10 @@ button { color: inherit; font: inherit; }
 .way-details__lead { max-width: 380px; margin: 0 0 18px; color: #fff8ed; font-family: var(--serif); font-size: 18px; line-height: 1.3; }
 .way-details__steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 0 0 20px; }
 .way-details__steps figure { margin: 0; overflow: hidden; }
+.way-details[open] .way-details__steps figure { animation: content-reveal 520ms cubic-bezier(.2, .7, .2, 1) both; }
+.way-details[open] .way-details__steps figure:nth-child(2) { animation-delay: 70ms; }
+.way-details[open] .way-details__steps figure:nth-child(3) { animation-delay: 140ms; }
+.way-details[open] .way-details__steps figure:nth-child(4) { animation-delay: 210ms; }
 .way-details__steps img { height: 118px; object-fit: cover; transition: transform 260ms ease; }
 .way-details__steps figure:hover img { transform: scale(1.06); }
 .way-details__steps figcaption { padding-top: 7px; color: #d6b5a2; font-size: 10px; line-height: 1.35; }
@@ -213,8 +218,8 @@ button { color: inherit; font: inherit; }
 .modal-open { overflow: hidden; }
 .recipe-modal { position: fixed; z-index: 30; inset: 0; display: grid; place-items: center; padding: 24px; }
 .recipe-modal[hidden] { display: none; }
-.recipe-modal__backdrop { position: absolute; inset: 0; background: rgba(27, 18, 29, 0.78); backdrop-filter: blur(5px); }
-.recipe-modal__dialog { position: relative; display: grid; width: min(880px, 100%); max-height: min(650px, calc(100vh - 48px)); grid-template-columns: minmax(280px, 0.95fr) minmax(280px, 1.05fr); overflow: auto; color: var(--ink); background: var(--paper); box-shadow: 0 24px 70px rgba(27, 18, 29, 0.35); animation: modal-in 220ms ease-out both; }
+.recipe-modal__backdrop { position: absolute; inset: 0; background: rgba(27, 18, 29, 0.78); backdrop-filter: blur(5px); animation: backdrop-in 340ms ease-out both; }
+.recipe-modal__dialog { position: relative; display: grid; width: min(880px, 100%); max-height: min(650px, calc(100vh - 48px)); grid-template-columns: minmax(280px, 0.95fr) minmax(280px, 1.05fr); overflow: auto; color: var(--ink); background: var(--paper); box-shadow: 0 24px 70px rgba(27, 18, 29, 0.35); animation: modal-in 420ms cubic-bezier(.2, .7, .2, 1) both; }
 .recipe-modal__close { position: absolute; z-index: 1; top: 14px; right: 14px; display: grid; width: 38px; height: 38px; place-items: center; border: 0; color: var(--night); background: var(--cream); cursor: pointer; font-size: 25px; line-height: 1; }
 .recipe-modal__close:hover { color: white; background: var(--pumpkin); }
 .recipe-modal__image-wrap { min-height: 390px; background: var(--night); }
@@ -229,8 +234,8 @@ button { color: inherit; font: inherit; }
 .recipe-modal__source span { color: var(--pumpkin-dark); }
 .season-guide { position: fixed; z-index: 32; inset: 0; display: grid; place-items: center; padding: 24px; }
 .season-guide[hidden] { display: none; }
-.season-guide__backdrop { position: absolute; inset: 0; background: rgba(27, 18, 29, 0.78); backdrop-filter: blur(5px); }
-.season-guide__dialog { position: relative; width: min(1040px, 100%); max-height: min(760px, calc(100vh - 48px)); overflow: auto; background: var(--cream); box-shadow: 0 24px 70px rgba(27, 18, 29, 0.35); animation: modal-in 220ms ease-out both; }
+.season-guide__backdrop { position: absolute; inset: 0; background: rgba(27, 18, 29, 0.78); backdrop-filter: blur(5px); animation: backdrop-in 340ms ease-out both; }
+.season-guide__dialog { position: relative; width: min(1040px, 100%); max-height: min(760px, calc(100vh - 48px)); overflow: auto; background: var(--cream); box-shadow: 0 24px 70px rgba(27, 18, 29, 0.35); animation: modal-in 420ms cubic-bezier(.2, .7, .2, 1) both; }
 .season-guide__close { position: absolute; z-index: 2; top: 18px; right: 18px; display: grid; width: 38px; height: 38px; place-items: center; border: 0; color: #fff8ed; background: rgba(43, 29, 43, 0.72); cursor: pointer; font-size: 25px; line-height: 1; }
 .season-guide__close:hover { color: var(--night); background: var(--pumpkin); }
 .season-guide__intro { padding: clamp(36px, 5vw, 62px); color: #fff8ed; background: var(--night); }
@@ -239,7 +244,9 @@ button { color: inherit; font: inherit; }
 .season-guide__intro h2 em { color: var(--pumpkin); }
 .season-guide__intro > p:last-child { max-width: 520px; margin: 22px 0 0; color: rgba(255, 248, 237, 0.76); font-size: 14px; }
 .season-guide__list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 28px; }
-.season-guide__item { overflow: hidden; background: var(--paper); }
+.season-guide__item { overflow: hidden; background: var(--paper); animation: content-reveal 520ms cubic-bezier(.2, .7, .2, 1) both; }
+.season-guide__item:nth-child(2) { animation-delay: 80ms; }
+.season-guide__item:nth-child(3) { animation-delay: 160ms; }
 .season-guide__item img { aspect-ratio: 1.12; height: auto; object-fit: cover; }
 .season-guide__item > div { padding: 22px 20px 24px; }
 .season-guide__date { margin: 0 0 10px; color: var(--pumpkin-dark); font-size: 9px; font-weight: 700; letter-spacing: 1.1px; line-height: 1.4; }
@@ -249,7 +256,10 @@ button { color: inherit; font: inherit; }
 @keyframes rise-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes hero-in { from { transform: scale(1.04); } to { transform: scale(1); } }
 @keyframes ticker-scroll { to { transform: translateX(-50%); } }
-@keyframes modal-in { from { opacity: 0; transform: translateY(12px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes drawer-enter { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes backdrop-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes content-reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes modal-in { from { opacity: 0; transform: translateY(10px) scale(0.99); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
 @media (min-width: 1500px) {
   .hero__content { padding-left: 0; }
@@ -360,5 +370,5 @@ button { color: inherit; font: inherit; }
   .copyright { grid-row: 3; }
 }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; animation-delay: 0ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
